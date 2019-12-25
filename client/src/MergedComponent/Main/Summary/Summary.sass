@@ -1,0 +1,33 @@
+@import "../../MiniComponents/miniComponents.module"
+@import '../../MiniComponents/mediaq'
+.summarygrid 
+  display: grid;
+  grid-column-gap: 5vw;
+  grid-row-gap: 2rem;
+  width: 75vw;
+  height: 70vh;
+  grid-auto-flow: column;
+  justify-items: start;
+  margin-left: 5vw;
+  @include sm
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  @include md
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+.summaryitem
+  @include SemiBold
+  font-size: calculateRem(22px)
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+
+
+.progressBar
+  min-width: 4rem
+  height: 1rem;
+  background: $TMgray;
+  border-radius: 5rem;
+  

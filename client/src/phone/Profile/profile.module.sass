@@ -1,0 +1,310 @@
+.background
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 375px
+    height: 812px
+    background: #ffffff 0% 0% no-repeat padding-box
+    border-radius: 0px 0px 0px 80px
+    
+@mixin navBarBox()
+    position: absolute;
+    left: 9px
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid gray
+
+@mixin box($left: null)
+    position: absolute;
+    top: 50px;
+    left: $left;
+    width: 70px;
+    height: 77px;
+    border: none
+    
+.youBox
+    @include box(42px)
+    opacity: 0.75
+    .youText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .you
+        @include navBarBox()
+        .profileLogo
+            border: 0.1rem #004165 solid
+            background: center no-repeat;
+            background-size: 100% auto ;
+            background-color: gray
+            border-radius: 50px
+            height: 48px
+            width: 48px
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+.nextWeekBox
+    @include box(152px)
+    opacity: 0.75
+    .nextWeekText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .nextWeek
+        @include navBarBox()
+        .nextWeekLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.summaryBox
+    @include box(263px)
+    opacity: 0.75
+    .summaryText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .summary
+        @include navBarBox()
+        .summaryLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.menu
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 375px
+    height: 156px
+    background: white
+    border-radius: 0px 0px 0px 80px
+
+.profilePic
+    position: absolute
+    top: 89px
+    left: 0px
+    width: 375px
+    height: 320px
+    // background: transparent url('photo.png') 0% 0% no-repeat padding-box;
+    background: center no-repeat;
+    background-size: 100% auto ;
+    background-color: gray
+
+.profilePicGradient
+    position: absolute
+    top: 258px;
+    left: 0px;
+    width: 375px;
+    height: 152px;
+    background: transparent linear-gradient(180deg, #21232C00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    //background: #dfdfdf 0% 0% no-repeat padding-box;
+
+.userName
+    position: absolute
+    top: 250px
+    left: 0px
+    width: 100%
+    text-align: center
+    font: Bold 40px Montserrat;
+    color: #004165
+    z-index: 1
+
+.statusContainer
+    position: absolute
+    top: 417px
+    left: 0px
+    width: 375px
+    height: 43px
+
+.totalRoleContainer
+    position: absolute
+    top: 0px
+    left: calc(375px * 0 / 3  )
+    width: calc(375px * 1 / 3  )
+    height: 100%
+
+.pointsContainer
+    position: absolute
+    top: 0px
+    left: calc(375px * 1 / 3  )
+    width: calc(375px * 1 / 3  )
+    height: 100%
+
+.trophiesContainer
+    position: absolute
+    top: 0px
+    left: calc(375px * 2 / 3  )
+    width: calc(375px * 1 / 3  )
+    height: 100%
+
+.statusValue
+    position: absolute
+    top: 0px
+    width: 100%
+    text-align: center
+    font: Bold 22px Montserrat;
+    color: #A9B2B1
+
+.statusTxt
+    position: absolute
+    top: 28px
+    width: 100%
+    text-align: center
+    font: Bold 12px Montserrat;
+    color: #A9B2B1
+
+.barContainer
+    position: absolute
+    top: 491px;
+    left: 16px;
+    width: 340px;
+    height: 44px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 30px;    
+    z-index: 1;
+
+.nextRoleBtn
+    position: absolute
+    top: 4px;
+    right: 10px
+    width: 160px;
+    height: 36px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    cursor: pointer
+    outline: none
+    border: none
+    text-align: center;
+    font: Bold 12px/15px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.nextRoleTxt
+    position: absolute
+    top: 11px;
+    width: 100%
+    text-align: center;
+    font: Bold 12px/15px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.performanceBtn
+    position: absolute
+    top: 4px;
+    left: 10px
+    width: 160px;
+    height: 36px;
+    background: #CD202C 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    cursor: pointer
+    outline: none
+    border: none
+    text-align: center;
+    font: Bold 12px/15px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+
+
+.performanceContainer
+    position: absolute;
+    width: 0px
+    // top: 591px;
+    // left: 415px;
+    // width: 343px;
+    // height: auto;
+
+.beContainer
+    position: relative
+    margin-bottom: 1rem;
+    top: 553px;
+    left: 16px;
+    width: 343px;
+    height: auto;
+    min-height: 139px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+.geContainer
+    position: relative
+    margin-bottom: 1rem;
+    top: 553px;
+    left: 16px;
+    width: 343px;
+    height: auto;
+    min-height: 139px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+.geTitle
+    top: 24px;
+    width: 100%;
+    text-align: center;
+    font: Bold 16px/19px Montserrat;
+    color: #FFFFFF;
+    margin: 1rem 0
+
+.beTitle
+    position: absolute
+    top: 24px;
+    width: 100%;
+    text-align: center;
+    font: Bold 16px/19px Montserrat;
+    color: #FFFFFF;
+
+.geContextContainer
+    top: 53px;
+    left: 32px;
+    width: 279px;
+    margin-bottom: 1rem
+    text-align: center;
+    font: normal 14px/22px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+
+.downloadBtn
+    top: 60%;
+    left: calc( 50% -  110px);
+    width: 220px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    text-align: center;
+    font: Bold 17px/23px Montserrat;
+    letter-spacing: -0.27px;
+    color: #772432;
+    border: none
+    outline: none
+    cursor: pointer
+    margin-bottom: 1rem
+
+

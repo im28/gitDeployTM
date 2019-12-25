@@ -1,0 +1,144 @@
+button.confirmButton:hover
+    background-color: #cecece
+
+@keyframes animatetop
+    from
+        opacity: 0;
+    to
+        opacity: 1;
+
+.container
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1457px;
+
+.background
+    position: absolute;
+    width: 1920px;
+    height: 876px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.blur
+    position: absolute;
+    width: 1920px;
+    height: 1457px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+
+.date
+    position: absolute;
+    top: 102px;
+    width: 100%;
+    text-align: center;
+    font: normal 33px/40px Montserrat;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+
+.roleName
+    position: absolute;
+    top: 187px;
+    width: 100%;
+    text-align: center;
+    font: Bold 48px/82px Montserrat;
+    letter-spacing: -0.77px;
+    color: #FFFFFF;
+
+.inputBox
+    position: absolute;
+    top: 547px;
+    left: 704px;
+    width: 513px;
+    height: 52px;
+    text-align: left;
+    font: normal 32px/31px Montserrat;
+    background-color: #772432;
+    letter-spacing: -0.32px;
+    outline: none;
+    color: #FFFFFF;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+
+@mixin btnStyle()
+    position: absolute;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+.applyBtn
+    @include btnStyle()
+    top: 699px;
+    left: 801px;
+    width: 319px;
+    height: 77px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    font: Bold 34px/46px Montserrat;
+    letter-spacing: -0.55px;
+    color: #772432;
+
+button:Hover
+    background-color: darken(#FFFFFF, 30%);
+
+.reConfirmBG
+    position: absolute;
+    width: 1920px;
+    height: 733px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.confirmBtn
+    @include btnStyle()
+    top: 514px;
+    left: 825px;
+    width: 271px;
+    height: 66px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    font: Bold 30px/41px Montserrat;
+    letter-spacing: -0.48px;
+    color: #772432;
+
+.backBtn
+    @include btnStyle()
+    top: 611px;
+    left: 873px;
+    width: 174px;
+    height: 42px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    font: Bold 19px/26px Montserrat;
+    letter-spacing: -0.31px;
+    color: #772432;
+
+.confirmRoleTxt
+    position: absolute;
+    top: 430px;
+    width: 100%;
+    text-align: center;
+    font: normal 32px/39px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.confirmedBG
+    position: absolute;
+    width: 1920px;
+    height: 689px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.confirmedTxt
+    position: absolute;
+    top: 464px;
+    width: 100%;
+    text-align: center;
+    font: Bold 47px/64px Montserrat;
+    letter-spacing: -0.76px;
+    color: #FFFFFF;

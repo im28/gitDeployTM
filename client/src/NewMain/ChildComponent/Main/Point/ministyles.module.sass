@@ -1,0 +1,140 @@
+@keyframes animatetop
+    from
+        opacity: 0;
+    to
+        opacity: 1;
+
+.container
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1457px;
+
+.background
+    position: absolute;
+    width: 1920px;
+    height: 689px;
+    background: #CD202C 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.deductBG
+    position: absolute;
+    top: 163px;
+    left: 512px;
+    width: 896px;
+    height: 754px;
+    background: #CD202C 0% 0% no-repeat padding-box;
+    border-radius: 80px;
+    animation: animatetop 0.4s
+
+.blur
+    position: absolute;
+    width: 1920px;
+    height: 1457px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+
+.date
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    text-align: center;
+    font: normal 27px/33px Montserrat;
+    letter-spacing: -0.54px;
+    color: #FFFFFF;
+
+.roleName
+    position: absolute;
+    top: 135px;
+    width: 100%;
+    text-align: center;
+    font: Bold 40px/68px Montserrat;
+    letter-spacing: -0.64px;
+    color: #FFFFFF;
+
+@mixin btnStyle()
+    position: absolute;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+button:Hover
+    background-color: darken(#FFFFFF, 30%);
+
+.confirmBtn
+    @include btnStyle()
+    top: 505px;
+    left: calc(50% - 135px);
+    width: 271px;
+    height: 66px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    font: Bold 30px/41px Montserrat;
+    letter-spacing: -0.48px;
+    color: #772432;
+
+.backBtn
+    @include btnStyle()
+    top: 597px;
+    left: 873px;
+    width: 174px;
+    height: 42px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    text-align: center;
+    font: Bold 19px/26px Montserrat;
+    letter-spacing: -0.31px;
+    color: #772432;
+
+.deductBtn
+    @include btnStyle()
+    top: 561px;
+    left: calc(50% - 108px);
+    width: 217px;
+    height: 125px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+
+.confirmedTxt
+    position: absolute;
+    top: 333px;
+    left: calc(50% - 553px);
+    width: 1106px;
+    height: 140px;
+    text-align: center;
+    font: Bold 48px/82px Montserrat;
+    letter-spacing: -0.77px;
+    color: #FFFFFF;
+
+.ohNoText
+    position: absolute;
+    top: 79px;
+    width: 100%;
+    text-align: center;
+    font: normal 52px/63px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.deductContent
+    position: absolute;
+    top: 225px;
+    left: calc(50% - 373px);
+    width: 746px;
+    height: 124px;
+    text-align: center;
+    font: normal 51px/62px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.deductPoint
+    position: absolute;
+    top: 409px;
+    width: 100%;
+    text-align: center;
+    font: normal 52px/63px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;

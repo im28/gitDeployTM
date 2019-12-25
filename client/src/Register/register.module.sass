@@ -1,0 +1,179 @@
+
+.background
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    transform-origin: left top;
+
+.joinUs
+    position: absolute;
+    top: 88px;
+    left: 852px;
+    width: 217px;
+    height: 86px - 10px;
+    padding-top: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    text-align: center;
+    font: normal 31px/67px Montserrat;
+    letter-spacing: 0.12px;
+    color: #772432;
+
+@mixin inputBox($top: null, $left: null)
+    position: absolute;
+    left: $left;
+    top: $top;
+    width: 395px;
+    height: 38px;
+    text-align: left;
+    font: normal 19px/24px Montserrat;
+    border: none;
+    border-bottom: 2px solid rgb(88, 88, 88);
+    letter-spacing: -0.19px;
+    color: #241332;
+    opacity: 0.32;
+
+.lastName
+    @include inputBox(331px, 308px);
+.firstName
+    @include inputBox(331px, 764px);
+.middleName
+    @include inputBox(331px, 1218px);
+.phone
+    @include inputBox(473px, 308px);
+.email
+    @include inputBox(473px, 764px);
+.orgnization
+    @include inputBox(626px, 308px);
+.addressOne
+    @include inputBox(626px, 764px);
+.addressTwo
+    @include inputBox(626px, 1218px);
+.postalCode
+    @include inputBox(720px, 308px);
+
+@mixin subTitle($top: null)
+    position: absolute;
+    top: $top;
+    left: 308px;
+    text-align: left;
+    font: normal 22px/27px Montserrat;
+    letter-spacing: 0;
+    color: #004165;
+
+.name
+    @include subTitle(281px)
+    
+.contact
+    @include subTitle(434px)
+
+.address
+    @include subTitle(582px)
+
+.apply
+    position: absolute;
+    top: 861px;
+    left: 630px;
+    width: 661px;
+    height: 105px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 52px;
+    border: none;
+    transition-duration: 0.4s;
+    text-align: center;
+    font: normal 28px/26px Montserrat;
+    letter-spacing: 0.11px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+button.apply:hover
+    background-color: lighten(#004165, 5%);
+
+.confirmation
+    position: fixed;
+    width: 1920px;
+    height: 582px - 30px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    text-align: center;
+    font: normal 32px/39px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    padding-top: 30px
+    animation: animatetop 0.4s
+
+.blur
+    position: fixed;
+    width: 1920px;
+    height: 1080px;
+    background: #ffffffb7 0% 0% no-repeat padding-box;
+    
+.confirmTxt
+    position: absolute;
+    top: 153px;
+    width: 100%
+    text-align: center;
+    font: Bold 56px/76px Montserrat;
+    letter-spacing: -0.9px;
+    color: #FFFFFF;
+
+.confirmContact
+    position: absolute;
+    top: 288px;
+    width: 100%;
+    text-align: center;
+    font: Medium 45px/55px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.confirmButton
+    position: absolute;
+    top: 427px;
+    left: 879px;
+    width: 162px;
+    height: 94px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    border: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+.confirmImg
+    position: absolute;
+    top: 15.41px;
+    left: 49px;
+    width: 63px;
+    height: 63px;
+    background: transparent url('ConfirmBtn.png') 0% 0% no-repeat padding-box;
+
+button.confirmButton:hover
+    background-color: #cecece
+
+@keyframes animatetop
+    from
+        opacity: 0;
+    to
+        opacity: 1;
+
+.lastName:after 
+    content: "*";
+    color: red;
+
+.firstName:after 
+    content: "*";
+    color: red;
+.email:after 
+    content: "*";
+    color: red;
+.password:after 
+    content: "*";
+    color: red;
+input:after  
+    content: "*"; 
+
+
+    
+

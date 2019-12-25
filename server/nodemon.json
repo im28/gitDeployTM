@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MONGO_USER": "root",
+        "MONGO_PASSWORD": "postgres"
+    }
+}

@@ -1,0 +1,147 @@
+button.confirmButton:hover
+    background-color: #cecece
+
+@keyframes animatetop
+    from
+        opacity: 0;
+    to
+        opacity: 1;
+
+.container
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1457px;
+
+.background
+    position: absolute;
+    width: 1920px;
+    height: 876px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.blur
+    position: absolute;
+    width: 1920px;
+    height: 1457px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+
+.newMemberTxt
+    position: absolute;
+    top: 73px;
+    width: 100%;
+    text-align: center;
+    font: Bold 32px/82px Montserrat;
+    letter-spacing: -0.51px;
+    color: #FFFFFF;
+
+.addNewMemberTxt
+    position: absolute;
+    top: 139px;
+    width: 100%;
+    text-align: center;
+    font: Bold 48px/82px Montserrat;
+    letter-spacing: -0.77px;
+    color: #FFFFFF;
+
+@mixin txtBox($top: null)
+    position: absolute;
+    top: $top;
+    left: calc(50% - 256px);
+    width: 513px;
+    height: 52px;
+    text-align: left;
+    font: normal 32px/31px Montserrat;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    background-color: #004165
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #FFFFFF;
+
+.nameTxt
+    @include txtBox(271px)
+.usernameTxt
+    @include txtBox(371px)
+.passwordTxt
+    @include txtBox(471px)
+
+.btnConfirm
+    position: absolute;
+    top: 633px;
+    left: calc(50% - 135px);
+    width: 271px;
+    height: 66px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    text-align: center;
+    font: Bold 30px/41px Montserrat;
+    letter-spacing: -0.48px;
+    color: #004165;
+    outline: none;
+    border: none;
+
+.btnBack
+    position: absolute;
+    top: 730px;
+    left: calc(50% - 87px);
+    width: 174px;
+    height: 42px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    text-align: center;
+    font: Bold 19px/26px Montserrat;
+    letter-spacing: -0.31px;
+    color: #004165;
+    outline: none;
+    border: none;
+
+.ConfirmBG
+    position: absolute;
+    width: 1920px;
+    height: 582px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 350px;
+    animation: animatetop 0.4s
+
+.ConfirmTxt
+    position: absolute;
+    top: 153px;
+    width: 100%;
+    text-align: center;
+    font: Bold 56px/76px Montserrat;
+    letter-spacing: -0.9px;
+    color: #FFFFFF;
+
+.welcomeMember
+    position: absolute;
+    top: 288px;
+    width: 100%;
+    text-align: center;
+    font: normal 45px/55px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.btnRight
+    position: absolute;
+    top: 427px;
+    left: calc(50% - 81px);
+    width: 162px;
+    height: 94px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    outline: none;
+    border: none;
+
+.btnIcon
+    position: absolute;
+    top: 442px;
+    left: calc(50% - 31px);
+    width: 63px;
+    height: 63px;
+    background: transparent url('check.png') 0% 0% no-repeat padding-box 0% 0% no-repeat padding-box;
+    
+    

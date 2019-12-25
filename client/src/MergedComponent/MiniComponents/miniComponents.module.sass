@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+@import "../fontawesome/scss/fontawesome.scss";
+@import "../fontawesome/scss/solid.scss";
+@import "../fontawesome/scss/brands.scss";
+@import "../fontawesome/scss/regular.scss";
+@import "mediaq"
+
+$TMyellow: #F2DF74;
+$TMblue: #004165;
+$TMgray: #A9B2B1;
+$TMred: #CD202C;
+$TMpurple: #772432;
+*
+  box-sizing: border-box
+
+@supports (-ms-ime-align:auto) 
+  .navigator_tag
+    margin-top: 20vmin;
+  
+.TMblue 
+  color: $TMblue
+
+.TMyellow 
+  color: $TMyellow
+
+.TMgray 
+  color: $TMgray
+
+.TMred 
+  color: $TMred    
+
+@function calculateRem($size) 
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+
+@mixin centerHorizontal()
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+@mixin SemiBold 
+  font-family:  Montserrat;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+
+@mixin Bold 
+  font-family:  Montserrat;
+  font-weight: 700;
+
+@mixin Regular  
+  font-family:  Montserrat;
+  font-weight: 500;
+
+.tagComponent 
+  @include Regular;
+  @include centerHorizontal;
+  width: calculateRem(217px*0.7);
+  text-align: center;
+  font-size: calculateRem(28px*0.7);
+  padding: calculateRem(15px*0.7) calculateRem(23px*0.7) ;
+  margin-top: calculateRem(88px*0.7);
+  color: $TMgray;
+  // border: 1px solid $TMgray;
+  border-radius: calculateRem(50px);
+  user-select: none;
+
+@mixin inputMixin($color)
+  @include Regular
+  margin-bottom: calculateRem(77px*0.7) 
+  width: calculateRem(666px*0.7);
+  display: block;
+  border: none;
+  padding: 1rem 0;
+  border-bottom: solid 1px $TMgray;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $color 4%);
+  background-position: calculateRem(-666px*0.7) 0;
+  background-size: calculateRem(666px*0.7) 100%;
+  background-repeat: no-repeat;
+  color: $color;
+  &:focus
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+    color: $color;
+    &::-webkit-input-placeholder 
+      color: $color;
+      font-size: 11px;
+      transform: translateY(-20px);
+      visibility: visible !important;
+
+.input
+  @include inputMixin($TMblue)
+
+.inputError
+  @include inputMixin($TMred) 
+  border-bottom: solid 1px $TMred;
+  
+.loginInput
+  @include centerHorizontal()
+  margin-top: calculateRem(276px*0.7);
+
+@mixin ButtonGeneral()
+  user-select: none;
+  border: 0px;  
+  
+.customButton
+  @include ButtonGeneral()
+  @include Bold
+  font-size: calculateRem(20px*0.7);
+  width: calculateRem(192px*0.7);
+  background-color: white;
+  padding: calculateRem(11px*0.7) 0;
+  border-radius: calculateRem(23px*0.7);
+  position: relative;
+  
+.customButtonBig
+  @include ButtonGeneral()
+  @include SemiBold
+  @include centerHorizontal()
+  font-size: calculateRem(28px*0.7);
+  width: calculateRem(666px*0.7);
+  margin-top: calculateRem(600px*0.7);
+  background-color: $TMblue;
+  color: white;
+  padding: 1rem 0;
+  border-radius: calculateRem(52px*0.7);
+  transition: background 0.8s, color 0.8s;
+  &:hover
+    background: lighten($TMblue, 10%) radial-gradient(circle, transparent 1%, lighten($TMblue, 10%) 1%) center/15000%;
+  &:active
+    background-color: lighten($TMblue, 20%);;
+    background-size: 100%;
+    transition: background 0s;
+
+.forgotLogin
+  @include SemiBold
+  @include centerHorizontal()
+  margin-top: calculateRem(776px*0.7);
+  font-size: calculateRem(24px*0.7);
+  color: $TMred
+  &:hover
+    color: darken($TMred,20% )
+
+.bg
+  margin-bottom: 2vh;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5,auto);
+  grid-gap: 5%;
+  overflow: auto; 
+  min-width: 576px;
+  @include sm
+    width: 80vw;
+    margin-left: 20vw;
+  @include md
+    margin-left: 14vw;
+    width: 86vw;
+  
+.side
+  position: fixed;
+  width: 100vw; 
+  height: 100vh;
+  background-color: $TMblue;
+  margin: 0;
+   
+.container
+  width: 100vw;
+  height: 100vh;
+
+
+@mixin gridContainer()
+  display: grid;
+  grid-row-gap: calculateRem(78px*0.7);
+  grid-column-gap: calculateRem(44px*0.7);
+  transition: all 0.5s;
+  
+
+.gridContainer
+  display: grid;
+  padding: 0.2rem; 
+  grid-column-gap: calculateRem(12px*0.7);
+  width: calculateRem(1504px*0.7);
+  grid-row-gap: calculateRem(78px*0.7);
+  justify-content: space-evenly
+  transition: all 0.5s;
+
+.gridContainerSpeaker
+  @include gridContainer()
+  justify-content: space-evenly;
+  margin: auto;
+
+.roleContainer
+  text-align: center
+  width: calculateRem(343px*0.7);
+  height: calculateRem(281px*0.7);
+  border-radius: 0 calculateRem(80px*0.7) 0 calculateRem(80px*0.7);
+  display: flex;        
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column
+
+.roleTag
+  @include Bold
+  color: white;
+  font-size: 1.4rem
+  line-height: 25px;
+  letter-spacing: -0.01rem;
+  width: 80%;
+  margin-top: calculateRem(20px);
+  margin-bottom: 0;
+
+.icon
+  color: white;
+  font-size: 2.3rem;
+  margin-bottom: 0.4rem;
+
+.tag
+  @include Bold
+  font-size: 1.4rem;
+  color: $TMblue
+  margin-left: 5vw;
+
+.dateHeader
+  @include SemiBold
+  @include centerHorizontal()
+  margin-top: calculateRem(30px*0.7)
+  font-size: 1.4rem;
+  color: $TMblue
+

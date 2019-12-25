@@ -1,0 +1,256 @@
+.background
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 375px
+    height: 812px
+    background: #A9B2B1 0% 0% no-repeat padding-box
+    border-radius: 0px 0px 0px 80px
+
+@mixin navBarBox()
+    position: absolute;
+    left: 9px
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid gray
+
+@mixin box($left: null)
+    position: absolute;
+    top: 50px;
+    left: $left;
+    width: 70px;
+    height: 77px;
+    border: none
+    
+.youBox
+    @include box(42px)
+    opacity: 0.75
+    .youText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .you
+        @include navBarBox()
+        .profileLogo
+            border: 0.2rem gray solid
+            background: center no-repeat;
+            background-size: 100% auto ;
+            background-color: gray
+            border-radius: 50px
+            height: 48px
+            width: 48px
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+.nextWeekBox
+    @include box(152px)
+    opacity: 0.75
+    .nextWeekText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .nextWeek
+        @include navBarBox()
+        .nextWeekLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.summaryBox
+    @include box(263px)
+    opacity: 0.75
+    .summaryText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .summary
+        @include navBarBox()
+        border: 2px solid #004165;
+        .summaryLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.menu
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 375px
+    height: 156px
+    background: white
+    border-radius: 0px 0px 0px 80px
+
+.summaryTitle
+    position: absolute
+    top: 177px
+    left: 0px
+    width: 375px
+    height: 156px
+    left: 48px
+    width: 156px
+    height: 32px
+    text-align: left
+    font: Bold 26px/30px Montserrat
+    letter-spacing: -0.42px
+    color: #000000
+
+
+.Roles
+    position: absolute
+    top: 244px
+    left: 48px
+    width: 59px
+    height: 22px
+    text-align: left
+    font: Bold 20px/30px Montserrat
+    letter-spacing: -0.32px
+    color: #000000
+
+.se
+    position: absolute
+    top: 652px
+    left: 48px
+    width: 253px
+    height: 22px
+    text-align: left
+    font: Bold 20px/30px Montserrat
+    letter-spacing: -0.32px
+    color: #000000    
+
+%roleText
+    position: absolute
+    left: 78px
+    width: 127px
+    height: 18px
+    text-align: left
+    font: Bold 14px Montserrat
+    letter-spacing: -0.23px
+    color: #004165
+%containers 
+    position: absolute
+    height: 30px
+    width: 327px  
+%point
+    position: absolute
+    left: 48px
+    width: 14px
+    height: 14px
+    background: #004165 0% 0% no-repeat padding-box
+    border-radius: 50px 
+
+.point
+    @extend %point
+.topic
+    @extend %roleText
+.participation
+    position: absolute
+    left: 219px
+    width: 22px
+    height: 19px
+    text-align: left
+    font: Bold 14px/30px Montserrat
+    letter-spacing: -0.26px
+    color: #004165
+    line-height: 1rem
+.score
+    position: absolute
+    left: 247px
+    width: 80px
+    height: 14px
+    background: #FFFFFF 0% 0% no-repeat padding-box
+    border-radius: 30px 
+
+.toastmaster
+    @extend %containers
+    top: 289px
+    
+.surgent
+    @extend %containers
+    top: 341px
+
+.grammarian
+    @extend %containers
+    top: 393px
+
+.ahcounter
+    @extend %containers
+    top: 445px
+
+.generalevaluator
+    @extend %containers
+    top: 497px
+
+.topicmaster
+    @extend %containers
+    top: 549px
+    
+
+.timer
+    @extend %containers
+    top: 600px
+
+.speeches
+    @extend %containers
+    top: 700px
+
+
+.evaluation
+    @extend %containers
+    top: 750px
+
+
+.scoreValue
+        position: absolute
+        left: 0px
+        width: 0px
+        height: 100%
+        background: #004165 0% 0% no-repeat padding-box
+        border-radius: 30px
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

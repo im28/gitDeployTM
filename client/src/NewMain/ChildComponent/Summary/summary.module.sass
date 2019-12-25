@@ -1,0 +1,134 @@
+@keyframes animatetop
+    from
+        top: +300px;
+    to
+        top : 0;
+
+.container
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+    transform-origin: left top;
+    background: #004165 0% 0% no-repeat padding-box;
+
+.containerSecond
+    position: absolute;
+    top: 0px;
+    left: 272px;
+    width: 1648px;
+    height: 500px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+
+.background
+    position: absolute;
+    top: 0px;
+    left: 272px;
+    width: 1648px;
+    height: 1005px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 450px;
+    animation: animatetop 0.4s
+
+.title
+    position: absolute;
+    top: 115px;
+    left: 114px;
+    width: 180px;
+    height: 44px;
+    text-align: left;
+    font: Bold 36px/30px Montserrat;
+    letter-spacing: -0.58px;
+    color: #004165;
+
+@mixin subTitle($left: null)
+    position: absolute;
+    left: $left;
+    top: 227px;
+    font: Bold 31px/47px Montserrat;
+    letter-spacing: -0.5px;
+    color: #004165;
+
+.rolesTitle
+    @include subTitle(112px)
+
+.SETitle
+    @include subTitle(825px)
+
+@mixin container($left: null, $width: null)
+    left: $left;
+    top: 295px;
+    width: $width;
+    height: 431px;
+    position: absolute;
+
+.roleBulletContainer
+    @include container(112px, 439px)
+
+.seBulletContainer
+    @include container(825px , 22px)
+    
+.bullet
+    width: 22px;
+    height: 22px;
+    background: #004165 0% 0% no-repeat padding-box;  
+    border-radius: 22px;
+    margin-bottom: 60px; 
+    margin-top: 2px;   
+
+.roleTxtContainer
+    @include container(159px , 210px )
+.txt
+    text-align: left;
+    font: Bold 22px Montserrat;
+    letter-spacing: -0.35px;
+    color: #004165;
+    margin-bottom: 55px;
+
+.seTxtContainer
+    @include container(872px , 210px )
+
+.roleValueContainer
+    @include container(376px , 37px )
+
+.roleValue
+    text-align: right;
+    font: Bold 24px Montserrat;
+    letter-spacing: -0.39px;
+    color: #004165;
+    margin-bottom: 53px; 
+    margin-top: 2px;
+
+.seValueContainer
+    @include container(1089px, 37px )
+
+.rolePercentContainer
+    @include container(425px , 126px )
+
+.sePercentContainer
+    @include container(1138px, 126px)
+    
+
+.rolePercent
+    width: 126px;
+    height: 22px;
+    background: #A9B2B1 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    margin-bottom: 60px; 
+    margin-top: 5px;
+
+.rolePercentValue
+    height: 100%;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+
+    
+    
+    
+    
+    
+    
+    
+
+

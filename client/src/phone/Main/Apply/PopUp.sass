@@ -1,0 +1,102 @@
+@import "../../../MergedComponent/MiniComponents/miniComponents.module"
+
+button.confirmButton:hover
+    background-color: #cecece
+
+@keyframes animatetop
+    from
+        opacity: 0;
+        // transform: scale(0);
+    to
+        opacity: 1;
+        // transform: scale(1);
+
+    
+@keyframes fadeout
+    0%
+        opacity: 1;
+    50%
+        opacity: 1;
+    100%
+        opacity: 0;  
+
+.fade
+    animation: fadeout 2s;
+
+.containerPopUp1
+    position: fixed;
+    top: 0px;
+    // left: 0px;
+    width: 375px;
+    z-index: 1;
+    
+.backgroundM1
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50vh;
+    height: auto;
+    min-height: 60vh;
+    background: 0% 0% no-repeat padding-box;
+    border-radius: 5rem;
+    animation: animatetop 1s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: $TMblue
+
+.inputPopUp1 
+   @include inputMixin(white)
+   margin-bottom: 1rem;
+
+.inputRed1
+   @include inputMixin(white)
+   border-bottom: solid 1px $TMred;
+   margin-bottom: 1rem;
+
+.background1
+    position: absolute;
+    width: 375px;
+    height: auto;
+    min-height:  80vh;
+    background: 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px calculateRem(150px*0.7);
+    animation: animatetop 1s
+    display: flex;        
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column
+
+.blur1
+    position: absolute;
+    width: 375px;
+    height: 812px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+
+.blur1M
+    position: absolute;
+    width: 375px;
+    height: 812px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 0.7;
+
+.date1
+    @include Regular
+    margin-top: 2rem;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+
+.roleName1
+    @include Bold
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -0.77px;
+    color: #FFFFFF;
+

@@ -1,0 +1,353 @@
+@import "../../MergedComponent/fontawesome/scss/fontawesome.scss";
+@import "../../MergedComponent/fontawesome/scss/solid.scss";
+@import "../../MergedComponent/fontawesome/scss/brands.scss";
+@import "../../MergedComponent/fontawesome/scss/regular.scss";
+
+    
+    
+@mixin buttonProps($color: null)
+    left: 48px;
+    width: 148px;
+    height: 36px;
+    
+    border: none;
+    outline: none;
+
+    text-align: center;
+    font: Bold 17px/23px Montserrat;
+    letter-spacing: -0.27px;  
+
+    position: absolute;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;  
+    top: 135px;
+    color: $color;
+
+@mixin buttonProps2($color: null)
+    left: 214px;
+    width: 148px;
+    height: 36px;
+    
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    text-align: center;
+    font: Bold 17px/23px Montserrat;
+    letter-spacing: -0.27px;  
+
+    position: absolute;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;  
+    top: 135px;
+    color: $color;
+
+.exitBtn
+    position: absolute;
+    top: 135px;
+    left: 210px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    border: none
+    outline: none;
+
+.exitBtnSP
+    position: absolute;
+    top: 83px;
+    left: 160px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    border: none
+    outline: none;
+
+.exitBtnEV
+    position: absolute;
+    top: 83px;
+    left: 325px;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    border: none
+    outline: none;
+
+.exitBtnIcon
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 29px;
+    height: 31px;
+    background: transparent url('exit.png') 0% 0% no-repeat padding-box;
+
+@mixin navBarBox()
+    position: absolute;
+    left: 9px
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    border: 2px solid gray
+
+@mixin box($left: null)
+    position: absolute;
+    top: 50px;
+    left: $left;
+    width: 70px;
+    height: 77px;
+    border: none
+
+@mixin roleBox($top: null, $color: null)
+    position: absolute;
+    top: $top;
+    left: 0px;
+    width: 375px;
+    height: 195px;
+    background: $color 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 0px 80px;
+
+@mixin roleTxt()
+    position: absolute;
+    top: 85px;
+    left: 33px;
+    text-align: left;
+    font: Bold 22px/30px Montserrat;
+    letter-spacing: -0.35px;
+    color: #FFFFFF;
+
+.menu
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 375px;
+    height: 156px;
+    background: white;
+    border-radius: 0px 0px 0px 80px;
+    
+.youBox
+    @include box(42px)
+    opacity: 0.75
+    .youText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .you
+        @include navBarBox()
+        .profileLogo
+            border: 0.2rem gray solid
+            background: center no-repeat;
+            background-size: 100% auto ;
+            background-color: gray
+            border-radius: 50px
+            height: 48px
+            width: 48px
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+.nextWeekBox
+    @include box(152px)
+    opacity: 0.75
+    .nextWeekText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .nextWeek
+        @include navBarBox()
+        border: 2px solid #004165;
+        .nextWeekLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.summaryBox
+    @include box(263px)
+    opacity: 0.75
+    .summaryText
+        position: absolute
+        height: 100%
+        top: 55px
+        width: 70px
+        text-align: center
+        font: Bold 11px/14px Montserrat;
+        color: #002133
+    .summary
+        @include navBarBox()
+        .summaryLogo
+            position: relative;
+            float: left;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+.logoStyle
+    position: absolute;
+    top: 130px;
+    left: 295px;
+    width: 45px;
+    height: 45px;
+
+.logoStyle2
+    position: absolute;
+    top: 85px;
+    left: 280px;
+    width: 45px;
+    height: 45px;
+
+@mixin icon($bg:null)
+    position: absolute
+    width: 100%
+    height: 100%
+    background: url($bg) 0% 0% no-repeat padding-box  
+
+
+
+.teimg
+    @include icon("./icon/te.png")
+
+.saaimg
+    @include icon("./icon/saa.png")
+    
+.gimg
+    @include icon("./icon/g.png")
+
+.acimg
+    @include icon("./icon/ac.png")
+    
+.geimg
+    @include icon("./icon/ge.png")
+
+.tmimg
+    @include icon("./icon/tm.png")
+
+.s1img
+    @include icon("./icon/speaker.png")
+
+.s2img
+    @include icon("./icon/speaker.png")
+
+.s3img
+    @include icon("./icon/speaker.png") 
+
+.s4img
+    @include icon("./icon/speaker.png") 
+    
+.TEBg
+    @include roleBox(90px - 10px, #772432)
+
+.roleTitle
+    @include roleTxt()
+
+.TEApplyBg
+    @include buttonProps( #772432) 
+
+.SAABg
+    @include roleBox(219px - 10px, #004165)
+    
+.SAAApplyBg
+    @include buttonProps(#004165) 
+    
+.GBg
+    @include roleBox(348px - 10px , #CD202C)
+    
+.GApplyBg
+    @include buttonProps(#CD202C) 
+    
+.ACBg
+    @include roleBox(477px - 10px , #F2DF74)
+
+.ACApplyBg
+    @include buttonProps( #F2DF74) 
+
+.GEBg
+    @include roleBox(606px - 10px, #772432 )
+
+.GEApplyBg
+    @include buttonProps(#772432) 
+
+.TMBg
+    @include roleBox(735px - 10px, #004165)
+
+.TMApplyBg
+    @include buttonProps(#004165)
+
+.TRBg
+    @include roleBox(864px - 10px, #CD202C)
+
+.TRApplyBg
+    @include buttonProps( #CD202C) 
+  
+.S1Bg
+    @include roleBox(993px - 10px, #F2DF74)
+
+.S1ApplyBg
+    @include buttonProps(#F2DF74) 
+
+.S1EvaluateBt
+    @include buttonProps2(#F2DF74)
+
+.S2Bg
+    @include roleBox(1122px - 10px, #772432)
+
+.S2ApplyBg
+    @include buttonProps(#772432) 
+
+.S2EvaluateBt
+    @include buttonProps2(#772432)
+
+.S3Bg
+    @include roleBox(1251px - 10px, #004165)
+
+.S3ApplyBg
+    @include buttonProps(#004165)
+
+.S3EvaluateBt
+    @include buttonProps2(#004165)
+
+
+.S4Bg
+    @include roleBox(1380px - 10px, #CD202C)
+
+.S4ApplyBg
+    @include buttonProps(#CD202C)
+
+.S4EvaluateBt
+    @include buttonProps2(#CD202C) 
+
+.logOut
+    position: absolute;
+    top: 1600px
+    left: calc(50% - 74px);
+    width: 148px;
+    height: 36px;
+    
+    border: none;
+    outline: none;
+
+    text-align: center;
+    font: Bold 17px/23px Montserrat;
+    letter-spacing: -0.27px;  
+
+    position: absolute;
+
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 23px;  
+    color: #ffffff 
+
+

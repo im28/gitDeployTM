@@ -1,0 +1,72 @@
+.background
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 900px;
+    transform-origin: left top;
+
+.signIn
+    position: absolute;
+    top: 88px;
+    left: 852px;
+    width: 217px;
+    height: 86px - 24px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 124px;
+    text-align: center;
+    font: normal 32px Montserrat;
+    letter-spacing: 0.13px;
+    color: #FFFFFF;
+    padding-top: 24px;
+
+@mixin inputText($top: null)
+    position: absolute;
+    top: $top;
+    left: 627px;
+    width: 666px;
+    height: 57px;
+    border: none;
+    border-bottom: 2px solid rgb(88, 88, 88);
+    text-align: left;
+    font: normal 32px/40px Montserrat;
+    letter-spacing: -0.32px;
+    color: #241332;
+
+
+.email 
+    @include inputText(276px)
+    
+
+.password
+    @include inputText(418px)
+    
+.continue
+    position: absolute;
+    top: 606px;
+    left: 627px;
+    width: 666px;
+    height: 106px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 52px;
+    text-align: center;
+    font: normal 28px/52px Montserrat;
+    letter-spacing: 0.11px;
+    color: #FFFFFF;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+button.continue:Hover
+    background-color: #145e86;
+
+.forgotPassword
+    position: absolute;
+    top: 776px;
+    left: 826px;
+    width: 263px;
+    height: 29px;
+    text-align: left;
+    font: normal 24px/52px Montserrat;
+    letter-spacing: 0.1px;
+    color: #CD202C;

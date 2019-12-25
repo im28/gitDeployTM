@@ -1,0 +1,251 @@
+.animateTop
+    position: absolute;
+    transform-origin: left top;
+    animation: animatetop 0.4s
+
+@keyframes animatetop
+    from
+        top: +300px;
+        opacity: 0;
+    to
+        top : 0;
+        opacity: 1;
+
+.background
+    position: absolute;
+    top: 0px;
+    left: 272px;
+    width: 1648px;
+    height: 1457px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+
+.searchBar
+    position: absolute;
+    top: 68px;
+    left: 646px;
+    width: 356px;
+    height: 60px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    border: none;
+    text-align: center;
+    font: Bold 26px/35px Montserrat;
+    letter-spacing: -0.42px;
+    color: #FFFFFF;
+
+.Calendar
+    top: 230px;
+    left: 46px;
+
+.addMemberBtn
+    position: absolute;
+    top: 163px;
+    left: 646px;
+    width: 356px;
+    height: 60px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    border: none;
+    text-align: center;
+    font: Bold 26px/35px Montserrat;
+    letter-spacing: -0.42px;
+    color: #FFFFFF;
+.inputDate
+    font-family:  Montserrat;
+    font-weight: 500;
+    margin-bottom: calculateRem(77px*0.7) 
+    width: calculateRem(666px*0.7);
+    display: block;
+    border: none;
+    padding: 1rem 0;
+    border-bottom: solid 1px #A9B2B1;
+    transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, #004165 4%);
+    background-position: calculateRem(-666px*0.7) 0;
+    background-size: calculateRem(666px*0.7) 100%;
+    background-repeat: no-repeat;
+    color: #004165;
+
+.dateBtn
+    position: absolute;
+    top: 344px;
+    left: 87px;
+    width: 285px;
+    height: 89px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 45px;
+
+.dateDropDown
+    position: absolute;
+    top: 344px;
+    left: 87px;
+    width: 285px;
+    height: 89px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    text-align-last: center
+    font: Bold 32px/30px Montserrat;
+    letter-spacing: -0.51px;
+    color: #FFFFFF;
+
+.dateContainer
+    position: absolute;
+    top: 425px;
+    left: 452px;
+    width: 1107px;
+    height: 143px;
+    border: 5px solid #004165;
+    border-radius: 70px 70px 0px 0px;
+    opacity: 1;
+    box-sizing: content-box
+
+@mixin date($left: null)
+    position: absolute;
+    top: 0px;
+    left: $left;
+    width: 369px;
+    height: 60px;
+    
+
+.dateOne
+    @include date(0px)
+
+.dateTwo
+    @include date(369px)
+
+.dateThree
+    @include date(738px)
+
+.selectingDate
+    top: 10px
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font: Bold 32px Montserrat;
+    letter-spacing: -0.35px;
+    color: #004165;
+
+.dateBtnLeft
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    width: 35px;
+    height: 35px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer
+
+.dateBtnRight
+    position: absolute;
+    top: 12px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer
+
+.roleTitle
+    position: absolute;
+    top: 491px;
+    left: 44px;
+    width: 403px;
+    height: 57px;
+    border: 5px solid #004165;
+    border-radius: 100px 0px 0px 0px;
+    text-align: center;
+    font: Bold 32px Montserrat;
+    letter-spacing: -0.35px;
+    color: #004165;
+    padding-top: 20px
+    box-sizing: content-box
+
+.rolePlayer
+    position: absolute;
+    top: 491px;
+    left: 452px;
+    width: 1107px;
+    height: 57px;
+    border: 5px solid #004165;
+    border-radius: 0px 100px 0px 0px;
+    text-align: center;
+    font: Bold 32px Montserrat;
+    letter-spacing: -0.35px;
+    color: #004165;
+    padding-top: 20px
+    box-sizing: content-box
+
+.tableContainer
+    position: absolute;
+    top: 573px;
+    left: 44px;
+    width: 1515px;
+    height: 762px;
+    border: 5px solid #004165;
+    border-radius: 0px 0px 100px 100px;
+    box-sizing: content-box
+
+.nameContainer
+    position: absolute;
+    top: -5px;
+    left: 403px;
+    width: 1107px;
+    height: 762px;
+    border: 5px solid #004165;
+    border-radius: 0px 0px 100px 0px;
+    box-sizing: content-box
+
+.roleContainer
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 403px;
+    height: 762px;
+    border: 5px solid #004165;
+    border-radius: 0px 0px 0px 100px;
+    box-sizing: content-box
+
+.roleName
+    width: 100%;
+    text-align: center;
+    font: Bold 22px/30px Montserrat;
+    letter-spacing: -0.35px;
+    color: #004165;
+    margin-top: 23px;
+    box-sizing: content-box
+
+.recordOne
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 366px;
+    height: 762px;
+    border: 5px solid #004165;
+    box-sizing: content-box
+
+.recordTwo
+    position: absolute;
+    top: -5px;
+    left: 366px;
+    width: 366px;
+    height: 762px;
+    border: 5px solid #004165;
+    box-sizing: content-box
+
+.recordThree
+    position: absolute;
+    top: -5px;
+    left: 736px;
+    width: 365px;
+    height: 762px;
+    border: 5px solid #004165;
+    border-radius: 0px 0px 100px 0px;
+    box-sizing: content-box
+

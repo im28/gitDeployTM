@@ -1,0 +1,189 @@
+.animateTop
+    position: relative;
+    animation: animatetop 0.4s
+
+@keyframes animatetop
+    from
+        top: -300px;
+    to
+        top : 0;
+
+.container
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 272px;
+    height: 1179px;
+    transform-origin: left top;
+    background: #004165 0% 0% no-repeat padding-box;
+
+.containerSecond
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 540px;
+    background: #004165 0% 0% no-repeat padding-box;
+
+.background
+    position: absolute;
+    top: 75px;
+    left: 272px;
+    width: 1648px;
+    height: 1104px;
+    border-radius: 450px 0px 0px 0px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+
+@mixin profileSection($top: null, $height: null)
+    position: absolute;
+    top: $top;
+    left: 674px;
+    width: 301px;
+    height: $height;
+    border-radius: 75px;
+
+.changePic
+    position: absolute;
+    top: 170px;
+    left: 1074px;
+    width: 301px;
+    height: 301px;
+
+.profilPic
+    @include profileSection(25px, 301px);
+    background: #dfdfdf 0% 0% no-repeat padding-box;
+
+.profilPicStyle
+    @include profileSection(191px, 136px - 77px)
+    padding-top: 77px;
+    border-radius: 0px 0px 75px 75px;
+    background: transparent linear-gradient(180deg, #21232C00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    text-align: center;
+    font: Bold 36px/40px Montserrat;
+    letter-spacing: 0;
+    color: #dddddd;
+
+@mixin status($top: null, $left: null)
+    position: absolute;
+    top: $top;
+    left: $left - 70px;
+    width: 160px;
+    height: 43px;
+    text-align: center;
+    font: Bold 35px/43px Montserrat;
+    letter-spacing: 0;
+    color: #004165;
+    //border: 1px solid;
+
+.statusRole
+    @include status(389px, 625px);
+
+.statusPoint
+    @include status(389px, 811px);
+
+.statusTrophies
+    @include status(389px, 998px);
+
+.statusRoleTxt
+    @include status(431px, 625px);
+    font: Bold 19px/23px Montserrat;
+
+.statusPointTxt
+    @include status(431px, 811px);
+    font: Bold 19px/23px Montserrat;
+
+.statusTrophiesTxt
+    @include status(431px, 998px);
+    font: Bold 19px/23px Montserrat;
+
+@mixin divider($left: null)
+    position: absolute;
+    top: 393px;
+    left: $left;
+    width: 1px;
+    height: 66px;
+    background: #004165 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+
+.dividerLeft
+    @include divider(724px)
+
+.dividerRight
+     @include divider(919px)
+
+@mixin section($left: null)
+    position: absolute;
+    top: 503px
+    left: $left;
+    width: 240px;
+    height: 54px - 16px;
+    background: #CD202C 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    padding-top: 16px;
+    text-align: center;
+    font: Bold 18px/22px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.performance
+    @include section(467px);
+
+.nextRole
+    @include section(943px);
+
+.performanceContainer
+    position: absolute;
+    top: 591px;
+    left: 415px;
+    width: 343px;
+    height: auto;
+
+.userPerformance
+    position: relative;
+    width: 343px;
+    height: 139px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    margin-bottom: 30px;
+
+.userRoles
+    position: absolute;
+    top: 591px;
+    left: 891px;
+    width: 343px;
+    height: 263px;
+    background: #772432 0% 0% no-repeat padding-box;
+    border-radius: 40px;
+    padding-top: 24px;
+    text-align: center;
+    font: Bold 16px/19px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+
+.userRolesContainer
+    margin: 10px auto;
+    width: 279px;
+    height: 132px;
+    text-align: left;
+    font: Regular 14px/22px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.64;
+    //border: 1px solid;
+
+.buttonScript
+    position: absolute;
+    top: 207px;
+    left: 63px;
+    width: 220px;
+    height: 36px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    text-align: center;
+    font: Bold 17px/23px Montserrat;
+    letter-spacing: -0.27px;
+    color: #772432;
+    border: none;
+    transition-duration: 0.4s;
+button.buttonScript:Hover
+    background-color: #79e4ffc5;

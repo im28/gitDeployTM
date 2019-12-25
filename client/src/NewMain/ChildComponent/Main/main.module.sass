@@ -1,0 +1,132 @@
+.animateTop
+    position: absolute;
+    animation: animatetop 0.4s
+
+@keyframes animatetop
+    from
+        top: +300px;
+        opacity: 0;
+    to
+        top : 0;
+        opacity: 1;
+
+.background
+    position: absolute;
+    top: 0px;
+    left: 272px;
+    width: 1648px;
+    height: 1457px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+
+@mixin btn($top: null, $left: null)
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: 192px;
+    height: 47px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 23px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font: Bold 21px/28px Montserrat;
+    letter-spacing: -0.34px;
+    color: #772432;
+    transition-duration: 0.4s;
+
+.btnApply
+    @include btn(194px, 76px);
+button.btnApply:Hover
+    background-color: #79e4ffc5;
+
+.btnEvaluate
+    @include btn(251px, 76px);
+button.btnEvaluate:Hover
+    background-color: #79e4ffc5;
+
+.rolesName
+    position: absolute;
+    top: 40px;
+    left: 23px;
+    width: 298px;
+    height: 81px;
+    text-align: center;
+    font: Bold 32px/30px Montserrat;
+    letter-spacing: -0.51px;
+    color: #FFFFFF;
+
+@mixin subTitle($top: null, $left: null, $align: null)
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: calc(100% - $left) ;
+    text-align: $align;
+    font: Bold 25px/33px Montserrat;
+    letter-spacing: -0.58px;
+    color: #004165;
+
+.dateText
+    @include subTitle(40px, 191px, center);
+    width: 100%;
+    left: 0px;
+.rolesText
+    @include subTitle(141px, 105px, left);
+.skeText
+    @include subTitle(931px, 105px, left);
+
+@mixin boxOne($top: null, $left: null, $color: null) 
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: 343px;
+    height: 281px;
+    background: $color 0% 0% no-repeat padding-box;
+    border-radius: 0px 80px;
+
+@mixin boxTwo($top: null, $left: null, $color: null) 
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: 343px;
+    height: 338px;
+    background: $color 0% 0% no-repeat padding-box;
+    border-radius: 0px 80px;
+
+.TME
+    @include boxOne(238px, 64px, #772432);
+.SAA
+    @include boxOne(238px, 451px, #004165);
+.GMN
+    @include boxOne(238px, 838px, #CD202C);
+.AC
+    @include boxOne(238px, 1225px, #F2DF74);
+.GE
+    @include boxOne(597px, 451px, #772432);
+.TM
+    @include boxOne(597px, 838px, #004165);
+.SP1
+    @include boxTwo(1018px, 64px, #CD202C);
+.SP2
+    @include boxTwo(1018px, 451px, #F2DF74);
+.SP3
+    @include boxTwo(1018px, 838px, #772432);
+.SP4
+    @include boxTwo(1018px, 1225px, #004165);
+
+.btnExit
+    position: absolute;
+    top: 130px;
+    left: 147px;
+    width: 50px;
+    height: 47px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    border: none
+
+.btnIcon
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 29px;
+    height: 31px;
+    background: transparent url('../../icon/exit.png') 0% 0% no-repeat padding-box;

@@ -1,0 +1,101 @@
+.background
+    position: fixed;
+    width: 1920px;
+    height: 1080px;
+    background: #772432 0% 0% no-repeat padding-box;
+    transform-origin: left top;
+
+.whiteBox
+    position: absolute;
+    top: 76px;
+    left: 193px;
+    width: 1579px;
+    height: 718px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 75px;
+
+.continue
+    position: absolute;
+    top: 839px;
+    left: 780px;
+    width: 360px;
+    height: 82px;
+    background: #CD202C 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 41px;
+    text-align: center;
+    font: normal 26px/32px Montserrat;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    transition-duration: 0.4s;
+    cursor: pointer;
+button.continue:hover
+    background-color: lighten(#CD202C, 5%);
+
+.txt
+    position: absolute;
+    top: 52px;
+    left: 679px;
+    text-align: center;
+    font: normal 32px/33px Montserrat;
+    letter-spacing: 0.13px;
+    color: #000000;
+    
+@mixin container($left: null)
+    position: absolute;
+    top: 134px;
+    left: $left;
+    width: 336px;
+    height: 584px;
+    //border: 1px solid #A9B2B1;
+    border-radius: 8px;
+
+.firstContainer
+    @include container(67px)
+
+.secondContainer
+    @include container(437px)
+
+.thirdContainer
+    @include container(807px)
+
+.fourthContainer
+    @include container(1177px)
+
+@mixin pic($name: null)
+    position: absolute;
+    width: 336px;
+    height: 224px;
+    background: transparent url($name) 0% 0% no-repeat padding-box;
+    border: 0.20000000298023224px solid #A9B2B1;
+    border-radius: 8px;
+
+.firstPic
+    @include pic('MEL_182.png')
+    
+.secondPic
+    @include pic('NBM_1070.png')
+
+.thirdPic
+    @include pic('MEL_489.png')
+
+.fourthPic
+    @include pic('NBM_1199.png')
+
+.subTitle
+    position: absolute;
+    top: 273px;
+    text-align: center;
+    font: Bold 40px/36px Montserrat;
+    letter-spacing: -0.64px;
+    color: #000000;
+    
+.content
+    position: absolute;
+    top: 412px;
+    text-align: center;
+    font: normal 20px Montserrat;
+    letter-spacing: 0;
+    color: #767676;
+    
+    
