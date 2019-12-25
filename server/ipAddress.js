@@ -1,3 +1,3 @@
-var ip = "himosama.dynu.net/"
+var ip = "localhost"
 
 module.exports = 'http://' + ip + ':8000';

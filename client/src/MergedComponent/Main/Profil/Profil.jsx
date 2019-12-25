@@ -153,7 +153,7 @@ class Profil extends Component{
                         this.state.selectedFile &&
                         <i className="fas fa-upload" style={{color: "#004165",position: "absolute",fontSize: "2rem",left: "800px",top: "341px",cursor: "pointer"}} onClick={this.IconClick}></i>
                     }
-                    <a target="_blank" ref="link" rel="noopener noreferrer" href={`${getIP()}/Script/${this.state.roleName}.pdf`} style={{display:"none"}}>a</a>
+                    <a target="_blank" ref="link" rel="noopener noreferrer" href={`${getIP()}/Script/${(this.state.roleName.replace(/\s/g, '')).toLowerCase()}.pdf`} style={{display:"none"}}>a</a>
                     <input type="file" name="file" accept="image/*" ref="fileUploader" onChange={this.fileChange} style={{display:"none"}}/>
                     <button onClick={this.UploadHandeler} ref="Uploader" style={{display:"none"}} >Upload</button>
                     <div className={ styles.statusRole}>{this.state.totalRoles}</div>
