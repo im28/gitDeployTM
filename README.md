@@ -1,7 +1,9 @@
-
 # TMAGENDA
 
 
+## VIEW ONLINE DIRECTLY AT 
+### **[http://tmagenda.digital/](http://tmagenda.digital/)**
+##
 A dynamic agenda for toastmasters 
 
 for:
