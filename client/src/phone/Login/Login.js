@@ -8,6 +8,7 @@ import {LoginHTTP} from "../../HTTP/Login";
 import {UserHTTP} from "../../HTTP/User";
 import {CompleteRolesHTTP} from "../../HTTP/CompleteRoles"
 import {GetMeetingHTTP} from '../../HTTP/GetMeeting'
+import {GetPerformanceHTTP} from "../../HTTP/GetPerformance"
 import HalfCircleSpinner from '@bit/bondz.react-epic-spinners.half-circle-spinner';
 import { Link } from "react-router-dom";
 
@@ -73,6 +74,7 @@ class Login extends Component{
                 if(Cookies.get("isAdmin") === "1"){
                     await CompleteRolesHTTP()
                 }
+                await GetPerformanceHTTP();
             }
             this.context.login();
             this.setState({

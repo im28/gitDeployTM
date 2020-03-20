@@ -1,5 +1,5 @@
 export function getIP() {
-    var ip = "localhost"
+    var ip = "192.168.0.103"
 
     var http = 'http://' + ip + ':8000/Area25'
 

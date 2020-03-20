@@ -5,25 +5,28 @@ import {GetRolesHTTP} from '../../HTTP/GetRoles'
 import PopUpM from "./Apply/PopUpM.jsx"
 import {ResetFlagsHTTP} from '../../HTTP/ResetFlags'
 
-let colors=["#CD202C","#004165","#772432","#F2DF74"]
-let colorname=["TMred","TMblue","TMpurple","TMyellow","TMgray"]
+let colors=["#772432","#004165","#CD202C","#F2DF74"]
+let colorname=["TMpurple","TMblue","TMred","TMyellow","TMgray"]
 
+let name = ["Toastmaster of the evening","Surgent At Arms","Grammarian","Ah-Counter" ,"General Evaluator","Topic Master","Timer"]
+let name2 = ["Toastmaster","Surgent At Arms","Grammarian","Ah-Counter" ,"General Evaluator","Topic Master","Timer"]
+name2.reverse();
+name.reverse()
+let icon = ["fas fa-microphone-alt","fas fa-wrench","fas fa-bookmark","fas fa-book","fas fa-glasses","fas fa-question","fas fa-stopwatch"]
+let speaker,evaluator,mine,rolePlayer = false;
+// let inputElementsRoles = [["Theme"],[],["Word of the day"],[],[],[],[]]
+// let inputElementsSpeakers = ["Title","Project Number", "Pathway" ,"Title"]
+let best = ["Best Speaker!!","Best Evaluator!!","Best Table Topics!!"]
 let roleIndex = [-1,-1,-1,-1,-1,-1,-1]
 let speakerIndex = [-1,-1,-1,-1]
 let evaluatorIndex = [-1,-1,-1,-1]
 let myRole = ""
-let name = ["Timer", "Topic Master", "General Evaluator", "Ah-Counter", "Grammarian", "Surgent At Arms", "Toastmaster"]
-let name2 = ["Toastmaster of the evening","Surgent At Arms","Grammarian","Ah-Counter" ,"General Evaluator","Topic Master","Timer"]
-let icon = ["fas fa-stopwatch", "fas fa-question", "fas fa-glasses", "fas fa-book", "fas fa-bookmark", "fas fa-wrench", "fas fa-microphone-alt"]
-let speaker,evaluator,mine,rolePlayer = false;
-let best = ["Best Speaker!!","Best Evaluator!!","Best Table Topics!!"]
 let styling =["TRBg","TMBg","GEBg","ACBg","GBg","SAABg","TEBg"]
 
 export default function Bg() {
     const [roles, setRoles] = useState([]);
     const [loading, setloading] = useState(true);
     const [flags] = useState(JSON.parse(Cookies.get("flags")));
-    
     function closeA(name) {
         let s = false
         
@@ -38,8 +41,6 @@ export default function Bg() {
         if (s===false) {
             ResetFlagsHTTP()
         }
-        
-        
     }
 
     async function fetchRoles() {
@@ -52,7 +53,7 @@ export default function Bg() {
             const role = JSON.parse(Cookies.get("GetRoles"))
             myRole="";
             role.forEach((item,index) =>{
-                let roleNumber = name2.findIndex((i)=>i === item.roleName)
+                let roleNumber = name.findIndex((i)=>i === item.roleName)
                 if (roleNumber === -1) {
                     for (let i = 1; i <= 4; i++) {
                         if (item.roleName === "Speaker " + i) {
@@ -69,7 +70,6 @@ export default function Bg() {
                 }else{
                     item.roleNumber = roleNumber;
                     roleIndex[item.roleNumber] = index;
-                    roleIndex.reverse();
                 }
                 if (item.owner._id === Cookies.get("userId")) 
                     myRole = item.roleName; 
@@ -81,7 +81,7 @@ export default function Bg() {
     
     useEffect(() => {
         const abortController = new AbortController();
-        fetchRoles();;
+        fetchRoles();
 
         return () => {
             abortController.abort();
@@ -127,6 +127,9 @@ export default function Bg() {
         }
              {
                 colors.map((item,index) => {
+                    // speakerIndex.reverse();
+                    // evaluatorIndex.reverse();
+
                     speaker=evaluator=mine = false;
                     if (roles[speakerIndex[index]] && roles[speakerIndex[index]].speakerNumber !== -1)
                         speaker = roles[speakerIndex[index]].owner.information.firstname
@@ -141,7 +144,7 @@ export default function Bg() {
                     <RoleContainer 
                     title={"Speaker "+ parseInt(4-index)} 
                     mainStyle={"S"+parseInt(4-index)+"Bg"}
-                    key={"Speaker"+index} 
+                    key={"Speaker"+ parseInt(4-index)} 
                     id={4-index}
                     color= {item}
                     colorname= {colorname[index]}
@@ -156,10 +159,8 @@ export default function Bg() {
                     />
             )})}
             {
-                name.map((item,index) => {
+                name2.map((item,index) => {
                     rolePlayer=mine = false;
-                        
-                    console.log(roleIndex);
                     
                     
                     if (roles[roleIndex[index]] && roles[roleIndex[index]].roleNumber !== -1) {

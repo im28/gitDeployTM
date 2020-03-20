@@ -53,7 +53,7 @@ const RoleContainer = (props) => {
     }
     const Evaluator = () =>{
         if (props.isSpeaker) {
-            if (props.isMyRole) {
+            if (props.isMyRole && props.evaluator) {
                 return(
                     <CustomButton 
                     value={"Withdraw "} 

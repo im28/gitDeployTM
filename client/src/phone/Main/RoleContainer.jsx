@@ -51,10 +51,10 @@ const RoleContainer = (props) => {
     }
     const Evaluator = () =>{
         if (props.isSpeaker) {
-            if (props.isMyRole) {
+            if (props.isMyRole&& props.evaluator ) {
                 return(
                     <CustomButton 
-                    value={"Withdraw "} 
+                    value={"Withdraw"} 
                     icon={<i className="fas fa-sign-out-alt"></i>}
                     style={{left: "65px",top: "135px",}}
                     color= {props.colorname}
