@@ -5,8 +5,10 @@
 ## VIEW ONLINE DIRECTLY AT 
 ### **[http://tmagenda.digital/](http://tmagenda.digital/) (--disabled)**
 
-Watch Video
-(https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
+[Watch Video Here](https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
+
+
+[Documentation](https://drive.google.com/file/d/1Q0kH_sCoovTb5YqswngGpsEB2l9YPNk3/view?usp=sharing)
 ##
 A dynamic agenda for toastmasters 
 
