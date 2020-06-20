@@ -48,7 +48,7 @@ $ npm install -g nodemon
 $ npm install
 $ npm start
 ```
-[![asciicast](https://share.gifyoutube.com/KzB6Gb.gif)](https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
+(https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
 #### Recources
 
 https://github.com/nodejs/node
