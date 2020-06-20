@@ -3,9 +3,10 @@
 
 
 ## VIEW ONLINE DIRECTLY AT 
-### **[http://tmagenda.digital/](http://tmagenda.digital/)**
-Username : root
-Password:  root
+### **[http://tmagenda.digital/](http://tmagenda.digital/) (--disabled)**
+
+Watch Video
+(https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
 ##
 A dynamic agenda for toastmasters 
 
@@ -48,7 +49,7 @@ $ npm install -g nodemon
 $ npm install
 $ npm start
 ```
-(https://drive.google.com/file/d/1wyisDd-HM7mlJNxoNfuuad13xkFYjoNq/preview)
+
 #### Recources
 
 https://github.com/nodejs/node
