@@ -5,7 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "@bit/bondz.react-epic-spinners.half-circle-spinner": "^0.3.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "disable-scroll": "^0.5.0",
     "immutability-helper": "^3.0.1",
